@@ -1,0 +1,125 @@
+/* --- General Page Styling --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2b003c, #5a0077);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  text-shadow: 1px 1px 4px #000;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #ff99ff;
+  text-shadow: 1px 1px 3px #000;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #ff66cc;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* --- Container for Game and Controls --- */
+.game-container {
+  background-color: rgba(0,0,0,0.6);
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  text-align: center;
+  display: inline-block;
+}
+
+/* --- Canvas --- */
+canvas {
+  border: 3px solid #fff;
+  border-radius: 10px;
+  background: #333;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* --- Buttons --- */
+button {
+  background-color: #6600cc;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover:not(:disabled) {
+  background-color: #9933ff;
+  transform: scale(1.05);
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* --- Score --- */
+.score {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #ffcc00;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* --- Toast / Game Over --- */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(50,0,100,0.85);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  animation: fadeIn 0.5s ease-in-out;
+  color: #fff;
+  max-width: 300px;
+  z-index: 100;
+}
+
+.toast h3 {
+  margin-top: 0;
+  color: #ffcc00;
+}
+
+.toast button {
+  margin-top: 10px;
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
